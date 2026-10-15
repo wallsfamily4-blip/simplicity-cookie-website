@@ -1,0 +1,19 @@
+media:
+  input: media
+  output: /media
+
+content:
+  - name: cookies
+    label: Cookie Gallery
+    type: collection
+    path: gallery/cookies
+    fields:
+      - name: title
+        label: Cookie Set Name
+        type: string
+      - name: photo
+        label: Cookie Photo
+        type: image
+      - name: description
+        label: Description
+        type: text
