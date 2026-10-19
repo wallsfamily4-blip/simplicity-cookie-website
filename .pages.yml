@@ -17,3 +17,33 @@ content:
       - name: description
         label: Description
         type: text
+        - name: kits
+    label: DIY Cookie Kits
+    type: collection
+    path: gallery/kits
+    fields:
+      - name: title
+        label: Kit Name
+        type: string
+      - name: photo
+        label: Kit Photo
+        type: image
+      - name: description
+        label: Description
+        type: text
+
+  - name: pyo
+    label: Paint-Your-Own Cookies
+    type: collection
+    path: gallery/pyo
+    fields:
+      - name: title
+        label: PYO Design Name
+        type: string
+      - name: photo
+        label: PYO Photo
+        type: image
+      - name: description
+        label: Description
+        type: text
+        
