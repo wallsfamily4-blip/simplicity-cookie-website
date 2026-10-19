@@ -17,7 +17,7 @@ content:
       - name: description
         label: Description
         type: text
-        - name: kits
+  - name: kits
     label: DIY Cookie Kits
     type: collection
     path: gallery/kits
