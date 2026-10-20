@@ -11,6 +11,8 @@ description: >2-
 
   Each set can be thoughtfully personalized to honor your loved one.
 
-   Please order at least two weeks in advance.
+
+  Please order at least two weeks in advance.
+
   $35.00 a dozen.
 ---
