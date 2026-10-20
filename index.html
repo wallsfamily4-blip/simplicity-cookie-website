@@ -48,7 +48,7 @@ const entries=(await Promise.all(listing.filter(f=>f.type==='file'&&/\.(md|mdx|j
   }catch{return null}
 }))).filter(Boolean);
 if(entries.length){
-  items=items.concat(entries.filter(entry=>!/strength, hope\s*&\s*courage/i.test(entry.title)&&!items.some(existing=>existing.data===entry.data)));
+  items=items.concat(entries.filter(entry=>!/strength, hope\s*&\s*courage/i.test(entry.title)&&!/skating|roller.?skate|let.s roll/i.test(entry.title+' '+entry.data+' '+entry.description)&&!items.some(existing=>existing.data===entry.data)));
   render();
 }
 }catch(error){console.warn('Cookie gallery unavailable',error)}})();})();
