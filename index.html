@@ -48,7 +48,7 @@ const entries=(await Promise.all(listing.filter(f=>f.type==='file'&&/\.(md|mdx|j
   }catch{return null}
 }))).filter(Boolean);
 if(entries.length){
-  items=entries.concat(items);
+  items=entries.concat(items.filter(existing=>!entries.some(entry=>entry.data===existing.data)));
   render();
 }
 }catch(error){console.warn('Cookie gallery unavailable',error)}})();})();
