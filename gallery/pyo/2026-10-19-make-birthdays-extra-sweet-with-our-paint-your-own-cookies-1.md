@@ -1,5 +1,5 @@
 ---
-title: Make birthdays extra sweet with our Paint-Your-Own Cookies!
+title: 🎂 BIRTHDAY PAINT-YOUR-OWN COOKIES.
 photo: /media/Birthday PYO.png
 description: >-
   Choose from 9 adorable birthday designs, including princesses, racing, ponies,
