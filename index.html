@@ -101,6 +101,7 @@ const res=await fetch(api,{headers:{Accept:'application/vnd.github+json'}});
 if(!res.ok)throw Error('Could not retrieve gallery');
 const listing=await res.json();
 if(!Array.isArray(listing))return;
+function cleanText(v){return String(v||'').replace(/^\\s*#{1,6}\\s*/,'').replace(/\\\\(["'])/g,'$1').replace(/^\\s*["']|["']\\s*$/g,'').trim()}
 function parse(s,name){
   if(name.endsWith('.json')){try{return JSON.parse(s)}catch{return null}}
   const head=s.match(/^---\s*\r?\n([\s\S]*?)\r?\n---/);
@@ -126,7 +127,7 @@ const entries=(await Promise.all(listing.filter(f=>f.type==='file'&&/\.(md|mdx|j
     if(!d)return null;
     const title=d.title||f.name.replace(/\.(md|mdx|json|ya?ml)$/i,'').replace(/[-_]/g,' ');
     const path=photoURL(d.photo||d.image);
-    return path?{title,category:'Cookies',kind:'image',data:path,description:d.description||''}:null;
+    return path?{title:cleanText(title),category:'Cookies',kind:'image',data:path,description:cleanText(d.description||'')}:null;
   }catch{return null}
 }))).filter(Boolean);
 if(entries.length){
