@@ -1,0 +1,141 @@
+;
+    padding: 25px;
+  }
+  h1 { color: #bd5683; }
+  h2 { color: #a74a76; }
+  .panel {
+    background: white;
+    border: 1px solid #f1c9dc;
+    border-radius: 18px;
+    padding: 24px;
+    margin: 25px 0;
+  }
+  .button {
+    display: inline-block;
+    background: #bd5683;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  label {
+    display: block;
+    text-align: left;
+    margin: 15px 0 6px;
+  }
+  input, textarea, select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #d9b7c8;
+    border-radius: 8px;
+    font: inherit;
+  }
+  textarea { min-height: 120px; }
+  button {
+    background: #bd5683;
+    color: white;
+    padding: 14px 24px;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    font: inherit;
+    margin-top: 20px;
+  }
+  .small { font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Simplicity Cookies</h1>
+  <h2>How to Order</h2>
+  <p>Have a sweet idea? I'd love to hear about it!</p>
+  <p>Whether you're planning a birthday, shower,
+  celebration, or just because, let's talk cookies!</p>
+
+  <div class="panel">
+    <h2>Email Me Directly</h2>
+    <p>Prefer to chat by email? I'd love that!</p>
+    <a class="button"
+       href="mailto:Wallsfamily4@yahoo.com?subject=Simplicity%20Cookies%20Inquiry">
+       Email to Order
+    </a>
+  </div>
+
+  <div class="panel">
+    <h2>Send an Order Inquiry</h2>
+    <p>Tell me a little about what you have in mind.
+    I'll follow up to discuss the details!</p>
+
+    <form id="orderForm">
+      <label for="name">Your name</label>
+      <input id="name" name="name" required>
+
+      <label for="email">Your email</label>
+      <input id="email" name="email" type="email" required>
+
+      <label for="type">What are you interested in?</label>
+      <select id="type" name="type">
+        <option>Custom decorated cookies</option>
+        <option>Paint-Your-Own cookies</option>
+        <option>DIY cookie kits</option>
+        <option>Edible images</option>
+        <option>Something else</option>
+      </select>
+
+      <label for="date">Date needed</label>
+      <input id="date" name="date" type="date">
+
+      <label for="quantity">Approximate quantity</label>
+      <input id="quantity" name="quantity"
+             placeholder="For example: 2 dozen">
+
+      <label for="details">Tell me about your idea!</label>
+      <textarea id="details" name="details"
+        placeholder="Theme, occasion, personalization, or anything you'd like to discuss"></textarea>
+
+      <button type="submit">Prepare My Inquiry</button>
+    </form>
+
+    <p class="small">This form opens your email app with
+    your information ready to send. Please press Send
+    in your email app to complete your inquiry.</p>
+  </div>
+
+  <p>Orders are subject to availability.
+  Please allow at least two weeks for custom cookie
+  orders whenever possible. Some seasonal items
+  may have different ordering deadlines.</p>
+
+  <p class="small">Submitting an inquiry does not
+  confirm an order. We'll discuss the details together!</p>
+
+  <p><a href="/">Back to Simplicity Cookies</a></p>
+</main>
+
+<script>
+document.getElementById('orderForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const form = event.currentTarget;
+  const data = new FormData(form);
+  const subject = 'Simplicity Cookies Order Inquiry';
+  const body = [
+    'Name: ' + data.get('name'),
+    'Email: ' + data.get('email'),
+    'Interested in: ' + data.get('type'),
+    'Date needed: ' + data.get('date'),
+    'Quantity: ' + data.get('quantity'),
+    '',
+    'Cookie ideas:',
+    data.get('details')
+  ].join('\n');
+
+  window.location.href =
+    'mailto:Wallsfamily4@yahoo.com?subject=' +
+    encodeURIComponent(subject) +
+    '&body=' + encodeURIComponent(body);
+});
+</script>
+</body>
+</html>
