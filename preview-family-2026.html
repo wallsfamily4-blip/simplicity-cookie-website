@@ -30,6 +30,7 @@ function parse(s,name){
   }
   return out;
 }
+function cleanText(value){return String(value||'').replace(/^\s*#{1,6}\s*/,'').replace(/\\(["'])/g,'$1').replace(/^["']|["']$/g,'').trim();}
 function photoURL(v){
   if(!v||typeof v!=='string')return '';
   const path=v.trim().replace(/^['"]|['"]$/g,'');
