@@ -47,7 +47,7 @@ content:
         label: Description
         type: text
         
-- name: edible-images
+  - name: edible-images
     label: Edible Image Cookie Ideas
     type: collection
     path: gallery/edible-images
