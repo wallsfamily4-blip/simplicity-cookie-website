@@ -1,5 +1,5 @@
 ---
-title: Halloween Paint-Your-Own Cookies 🎃👻
+title: 🎃 HALLOWEEN PAINT-YOUR-OWN COOKIES 👻
 photo: /media/Halloween new flyer.png
 description: >-
   Spooky fun you can eat! 🎨🍪 Choose your favorite Halloween design and bring
