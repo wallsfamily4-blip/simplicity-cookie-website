@@ -1,5 +1,5 @@
 ---
-title: 🕊️ In Loving Memory – Memorial Cookies
+title: " In Loving Memory – Memorial Cookies"
 photo: /media/Nelson.png
 description: >2-
    A sweet and heartfelt way to honor a life and cherish precious memories. ❤️
