@@ -1,6 +1,6 @@
 ---
 title: Halloween Paint-Your-Own Cookies 🎃👻
-photo: /media/IMG_4822.jpg
+photo: /media/Halloween new flyer.png
 description: >-
   Spooky fun you can eat! 🎨🍪 Choose your favorite Halloween design and bring
   it to life with edible paint. Each cookie is $6.50. Approximately 5 inches
