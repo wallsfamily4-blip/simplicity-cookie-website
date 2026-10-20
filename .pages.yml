@@ -47,3 +47,20 @@ content:
         label: Description
         type: text
         
+- name: edible-images
+    label: Edible Image Cookie Ideas
+    type: collection
+    path: gallery/edible-images
+    fields:
+      - name: title
+        label: Cookie Design Name
+        type: string
+      - name: photo
+        label: Cookie Photo
+        type: image
+      - name: description
+        label: Description
+        type: text
+
+
+ 
