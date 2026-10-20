@@ -42,7 +42,7 @@ const entries=(await Promise.all(listing.filter(f=>f.type==='file'&&/\.(md|mdx|j
   try{const response=await fetch(f.download_url);if(!response.ok)return null;
     const d=parse(await response.text(),f.name);
     if(!d)return null;
-    const title=d.title||f.name.replace(/\.(md|mdx|json|ya?ml)$/i,'').replace(/[-_]/g,' ');
+    const title=(d.title||f.name.replace(/\.(md|mdx|json|ya?ml)$/i,'').replace(/[-_]/g,' ')).replace(/^\\?['\"]|\\?['\"]$/g,'').replace(/\\([\"'])/g,'$1');
     const path=photoURL(d.photo||d.image);
     return path?{title:cleanText(title),category:f.category,kind:'image',data:path,description:cleanText(d.description||'')}:null;
   }catch{return null}
