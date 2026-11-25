@@ -4,6 +4,10 @@
 .latest-gallery-card img{display:block;width:100%;max-height:280px;object-fit:contain;border-radius:14px}
 .latest-gallery-card h3{margin:0 0 8px}
 @media(max-width:600px){.latest-gallery-card{grid-template-columns:1fr;text-align:center}}
+.christmas-flyers{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:20px;margin-top:24px;text-align:center}
+.christmas-flyers article{padding:14px;background:#fff;border:1px solid #eee2df;border-radius:14px}
+.christmas-flyers h3,.christmas-flyers p{margin:0 0 8px}
+.christmas-flyers img{display:block;width:100%;height:auto;border-radius:8px}
 </style></head><body>
   
   
@@ -22,6 +26,34 @@
         <a class="btn" id="latest-gallery-link" href="#gallery">See the full gallery</a>
       </div>
     </article>
+  </div>
+</section>
+<section id="christmas-specials" aria-labelledby="christmas-specials-heading">
+  <div class="wrap">
+    <h2 id="christmas-specials-heading">Christmas Cookie Specials</h2>
+    <p class="section-lead">Order by December 12 for local pickup on December 20. Earlier pickup is available by arrangement.</p>
+    <div class="christmas-flyers">
+      <article>
+        <h3>Treats for Santa</h3>
+        <p>$12</p>
+        <a href="/media/treats-for-santa-2026.jpg"><img src="/media/treats-for-santa-2026.jpg" alt="View the Treats for Santa flyer" width="1145" height="1374" loading="lazy"></a>
+      </article>
+      <article>
+        <h3>Christmas Cookie Kits</h3>
+        <p>$30 each or 2 for $50</p>
+        <a href="/media/christmas-cookie-kits-2026.jpg"><img src="/media/christmas-cookie-kits-2026.jpg" alt="View the Christmas Cookie Kits flyer" width="1165" height="1350" loading="lazy"></a>
+      </article>
+      <article>
+        <h3>Assorted Christmas Cookies</h3>
+        <p>$25</p>
+        <a href="/media/assorted-christmas-cookies-2026.jpg"><img src="/media/assorted-christmas-cookies-2026.jpg" alt="View the Assorted Christmas Cookies flyer" width="1086" height="1448" loading="lazy"></a>
+      </article>
+      <article>
+        <h3>Personalized Christmas Cookies</h3>
+        <p>$6 each</p>
+        <a href="/media/personalized-christmas-cookies-2026.jpg"><img src="/media/personalized-christmas-cookies-2026.jpg" alt="View the Personalized Christmas Cookies flyer" width="900" height="1536" loading="lazy"></a>
+      </article>
+    </div>
   </div>
 </section>
 <section id="gallery" class="mintbg"><div class="wrap"><div class="eyebrow" style="text-align:center">Fresh from my creative chaos</div><h2>The cookie gallery</h2><p class="section-lead">These are just some of my many fun cookie creations! Browse decorated cookies, DIY kits, paint-your-own treats, and edible images. There are plenty more sweet ideas where these came from!</p><div class="chips" id="filters"></div><div class="gallery" id="gallery-grid" aria-live="polite"></div></div></section>
